@@ -4,6 +4,7 @@
 #include <queue>
 #include "Puzzle.h"
 #include "Node.h"
+#include "Algorithm.h"
 
 using namespace std;
 
@@ -50,8 +51,6 @@ int main() {
         cout << endl;
     }
 
-    Node userState = Node(userPuzzle, zeroIndex);
-
     int userAlgorithm;
 
     cout << "Enter your choice of algorithm: " << endl;
@@ -59,9 +58,11 @@ int main() {
     cout << "2 - A* with the Misplaced Tile heuristic" << endl;
     cout << "3 - A* with the Euclidean distance heuristic" << endl;
 
-    // if (userAlgorithm == 1) {
-        
-    // }
+    Algorithm solve_puzzle(userPuzzle);
+
+    if (userAlgorithm == 1) {
+        solve_puzzle.uniform_cost_search();
+    }
 
     // if (userAlgorithm == 2) {
 

@@ -16,4 +16,6 @@ class Node {
         Node(const Puzzle& puzz, Node* par = nullptr, int c = 0);
         int get_heuristic(const Puzzle& puzz); // gets heuristic cost
         bool operator<(const Node& n) const;
-}
+};
+
+#endif
