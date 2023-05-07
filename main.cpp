@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 #include <queue>
-#include "Puzzle.h"
-#include "Node.h"
+// #include "Puzzle.h"
+// #include "Node.h"
 #include "Algorithm.h"
 
 using namespace std;
@@ -58,19 +58,21 @@ int main() {
     cout << "2 - A* with the Misplaced Tile heuristic" << endl;
     cout << "3 - A* with the Euclidean distance heuristic" << endl;
 
+    cin >> userAlgorithm;
+
     Algorithm solve_puzzle(userPuzzle);
 
     if (userAlgorithm == 1) {
         solve_puzzle.uniform_cost_search();
     }
 
-    // if (userAlgorithm == 2) {
+    if (userAlgorithm == 2) {
+        solve_puzzle.a_star_misplaced_tile();
+    }
 
-    // }
-
-    // if (userAlgorithm == 3) {
-
-    //}
+    if (userAlgorithm == 3) {
+        solve_puzzle.a_star_search_euclid();
+    }
 
     return 0;
 }
