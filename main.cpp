@@ -3,8 +3,10 @@
 #include <string>
 #include <queue>
 #include "Puzzle.h"
+#include "Puzzle.cpp"
 #include "Node.h"
 #include "Algorithm.h"
+#include "Algorithm.cpp"
 
 using namespace std;
 
@@ -64,9 +66,9 @@ int main() {
         solve_puzzle.uniform_cost_search();
     }
 
-    // if (userAlgorithm == 2) {
-
-    // }
+    if (userAlgorithm == 2) {
+        solve_puzzle.a_star_misplaced_tile();
+     }
 
     // if (userAlgorithm == 3) {
 
